@@ -66,6 +66,7 @@ public class RepositoryEvent {
 		MOVED_COLUMNS_IN_PROJECT("moved_columns_in_project"),
 		COMMENT_DELETED("comment_deleted"),
 		REVIEW_REQUESTED("review_requested"),
+		REVIEW_REQUEST_REMOVED("review_request_removed"),
 		HEAD_REF_FORCE_PUSHED("head_ref_force_pushed"),
 		BASE_REF_FORCE_PUSHED("base_ref_force_pushed");
 
