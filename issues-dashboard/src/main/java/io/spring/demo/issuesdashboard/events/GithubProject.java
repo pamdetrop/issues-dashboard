@@ -7,6 +7,7 @@ import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.Id;
 
+@SuppressWarnings("serial")
 @Entity
 public class GithubProject implements Serializable {
 
