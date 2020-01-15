@@ -33,13 +33,16 @@ public class EventsController {
 		return this.githubClient.fetchEvents(project.getOrgName(), project.getRepoName()).getBody();
 	}
 	
+	@GetMapping("/admin")
+	public String admin(Model model) {
+		
+		model.addAttribute("projects", this.repository.findAll());
+		
+		return "admin";
+	}
+	
 	@GetMapping("/")
 	public String dashboard(Model model) {
-//		List<DashboardEntry> entries = StreamSupport
-//				.stream(this.repository.findAll().spliterator(), true)
-//				.map(p -> new DashboardEntry(p, githubClient.fetchEventsList(p.getOrgName(), p.getRepoName())))
-//				.collect(Collectors.toList());
-//		model.addAttribute("entries", entries);
 		
 		Iterable<GithubProject> projects = this.repository.findAll();
 		
